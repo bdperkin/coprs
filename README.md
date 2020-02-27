@@ -1,0 +1,2 @@
+# coprs
+Fedora Coprs
