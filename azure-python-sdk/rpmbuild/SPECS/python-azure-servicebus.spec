@@ -29,7 +29,6 @@ Provides:       python3dist(%{pypi_name}) = %{version}
  
 Requires:       python3dist(azure-common) >= 1.1
 Requires:       python3dist(azure-nspkg)
-Requires:       python3dist(futures)
 Requires:       python3dist(msrestazure) < 2.0.0
 Requires:       python3dist(msrestazure) >= 0.4.32
 Requires:       python3dist(uamqp) < 2.0.0
