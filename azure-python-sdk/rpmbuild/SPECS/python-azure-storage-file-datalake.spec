@@ -17,7 +17,6 @@ BuildRequires:  python3dist(azure-core) >= 1.2.2
 BuildRequires:  python3dist(azure-storage-blob) >= 12.0
 BuildRequires:  python3dist(azure-storage-nspkg) < 4.0.0
 BuildRequires:  python3dist(azure-storage-nspkg) >= 3.0.0
-BuildRequires:  python3dist(futures)
 BuildRequires:  python3dist(msrest) >= 0.6.10
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(typing)
@@ -40,7 +39,6 @@ Requires:       python3dist(azure-core) >= 1.2.2
 Requires:       python3dist(azure-storage-blob) >= 12.0
 Requires:       python3dist(azure-storage-nspkg) < 4.0.0
 Requires:       python3dist(azure-storage-nspkg) >= 3.0.0
-Requires:       python3dist(futures)
 Requires:       python3dist(msrest) >= 0.6.10
 Requires:       python3dist(typing)
 %description -n python3-%{pypi_name}

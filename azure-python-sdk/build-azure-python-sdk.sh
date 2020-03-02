@@ -86,6 +86,7 @@ build_srpm() {
 
     sed -i -e "s/ ~= / >= /g" rpmbuild/SPECS/python-${NAME}.spec
     sed -i -e "/ python3dist(enum34)/d" rpmbuild/SPECS/python-${NAME}.spec
+    sed -i -e "/ python3dist(futures)/d" rpmbuild/SPECS/python-${NAME}.spec
     sed -i -e "s/^Summary:        $/Summary:        %{pypi_name}/g" rpmbuild/SPECS/python-${NAME}.spec
     sed -i -e "s/^%{?python_provide:%python_provide python3-%{pypi_name}}$/%{?python_provide:%python_provide python3-%{pypi_name}}\nProvides:       python3dist(%{pypi_name}) = %{version}/g" rpmbuild/SPECS/python-${NAME}.spec
     sed -i -e "s/^%autosetup -n %{pypi_name}-%{version}$/%autosetup -n %{pypi_name}-%{version}\n# Fix compatible release specifiers\nsed -i -e 's\/~=\/>=\/g' setup.py/g" rpmbuild/SPECS/python-${NAME}.spec
