@@ -2,7 +2,7 @@
 %global pypi_name azure-core
 
 Name:           python-%{pypi_name}
-Version:        1.2.2
+Version:        1.3.0
 Release:        1%{?dist}
 Summary:        Microsoft Azure Core Library for Python
 
@@ -24,7 +24,7 @@ modules those are needed when you use client libraries. As an end user, you
 don't need to manually install azure-core because it will be installed
 automatically when you install other SDKs. If you are a client library
 developer, please reference [client library developer reference]( for more
-information.[Source code]( |...
+information.[Source code]() |...
 
 %package -n     python3-%{pypi_name}
 Summary:        %{summary}
@@ -41,7 +41,7 @@ modules those are needed when you use client libraries. As an end user, you
 don't need to manually install azure-core because it will be installed
 automatically when you install other SDKs. If you are a client library
 developer, please reference [client library developer reference]( for more
-information.[Source code]( |...
+information.[Source code]() |...
 
 
 %prep
@@ -66,5 +66,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_core-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 1.3.0-1
+- Upgrade to version 1.3.0.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 1.2.2-1
 - Initial package.

@@ -2,7 +2,7 @@
 %global pypi_name azure-mgmt-datafactory
 
 Name:           python-%{pypi_name}
-Version:        0.9.0
+Version:        0.10.0
 Release:        1%{?dist}
 Summary:        Microsoft Azure Data Factory Management Client Library for Python
 
@@ -68,5 +68,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_mgmt_datafactory-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 0.10.0-1
+- Upgrade to version 0.10.0.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 0.9.0-1
 - Initial package.

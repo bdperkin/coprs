@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        3.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Microsoft Azure Cognitive Services Search Namespace Package [Internal]
 
 License:        MIT License
@@ -55,5 +55,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_cognitiveservices_search_nspkg-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 3.0.1-2
+- Rebuilt.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 3.0.1-1
 - Initial package.

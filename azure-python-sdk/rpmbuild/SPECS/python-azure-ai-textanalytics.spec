@@ -2,7 +2,7 @@
 %global pypi_name azure-ai-textanalytics
 
 Name:           python-%{pypi_name}
-Version:        1.0.0b2
+Version:        1.0.0b3
 Release:        1%{?dist}
 Summary:        Microsoft Azure Text Analytics Client Library for Python
 
@@ -15,7 +15,7 @@ BuildRequires:  python3-devel
 BuildRequires:  python3dist(azure-ai-nspkg)
 BuildRequires:  python3dist(azure-common) >= 1.1
 BuildRequires:  python3dist(azure-core) < 2.0.0
-BuildRequires:  python3dist(azure-core) >= 1.1.0
+BuildRequires:  python3dist(azure-core) >= 1.3.0
 BuildRequires:  python3dist(msrest) >= 0.6.0
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(six) >= 1.6
@@ -26,8 +26,8 @@ BuildRequires:  python3dist(typing)
 service that provides advanced natural language processing over raw text, and
 includes six main functions:* Sentiment Analysis * Named Entity Recognition *
 Personally Identifiable Information (PII) Entity Recognition * Linked Entity
-Recognition * Language Detection * Key Phrase Extraction[Source code]( |
-[Package...
+Recognition * Language Detection * Key Phrase Extraction[Source
+code][source_code]...
 
 %package -n     python3-%{pypi_name}
 Summary:        %{summary}
@@ -37,7 +37,7 @@ Provides:       python3dist(%{pypi_name}) = %{version}
 Requires:       python3dist(azure-ai-nspkg)
 Requires:       python3dist(azure-common) >= 1.1
 Requires:       python3dist(azure-core) < 2.0.0
-Requires:       python3dist(azure-core) >= 1.1.0
+Requires:       python3dist(azure-core) >= 1.3.0
 Requires:       python3dist(msrest) >= 0.6.0
 Requires:       python3dist(six) >= 1.6
 Requires:       python3dist(typing)
@@ -46,8 +46,8 @@ Requires:       python3dist(typing)
 service that provides advanced natural language processing over raw text, and
 includes six main functions:* Sentiment Analysis * Named Entity Recognition *
 Personally Identifiable Information (PII) Entity Recognition * Linked Entity
-Recognition * Language Detection * Key Phrase Extraction[Source code]( |
-[Package...
+Recognition * Language Detection * Key Phrase Extraction[Source
+code][source_code]...
 
 
 %prep
@@ -72,5 +72,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_ai_textanalytics-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 1.0.0b3-1
+- Upgrade to version 1.0.0b3.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 1.0.0b2-1
 - Initial package.

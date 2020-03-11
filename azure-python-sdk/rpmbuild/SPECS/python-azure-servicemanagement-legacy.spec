@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        0.20.6
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Microsoft Azure Legacy Service Management Client Library for Python
 
 License:        Apache License 2.0
@@ -56,5 +56,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_servicemanagement_legacy-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 0.20.6-2
+- Rebuilt.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 0.20.6-1
 - Initial package.

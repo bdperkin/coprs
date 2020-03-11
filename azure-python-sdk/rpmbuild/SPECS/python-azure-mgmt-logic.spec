@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        4.0.0rc2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Microsoft Azure Logic Apps Management Client Library for Python
 
 License:        MIT License
@@ -60,5 +60,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_mgmt_logic-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 4.0.0rc2-2
+- Rebuilt.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 4.0.0rc2-1
 - Initial package.

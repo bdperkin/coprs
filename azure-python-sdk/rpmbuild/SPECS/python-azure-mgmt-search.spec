@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        2.1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Microsoft Azure Search Management Client Library for Python
 
 License:        MIT License
@@ -68,5 +68,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_mgmt_search-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 2.1.0-2
+- Rebuilt.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 2.1.0-1
 - Initial package.

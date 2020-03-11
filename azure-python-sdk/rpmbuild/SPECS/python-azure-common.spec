@@ -2,7 +2,7 @@
 %global pypi_name azure-common
 
 Name:           python-%{pypi_name}
-Version:        1.1.24
+Version:        1.1.25
 Release:        1%{?dist}
 Summary:        Microsoft Azure Client Library for Python (Common)
 
@@ -15,12 +15,12 @@ BuildRequires:  python3-devel
 BuildRequires:  python3dist(setuptools)
 
 %description
-Microsoft Azure SDK for Python This is the Microsoft Azure common code.This
+ Microsoft Azure SDK for PythonThis is the Microsoft Azure common code.This
 package provides shared code by the Azure packages.If you are looking to
-install the Azure client libraries, refer to the main Github repository: ..
-image:: .. :changelog:Release History 1.1.24 (2019-12-18) +++++++++++++++++++-
-get_client_from_cli_profile now supports KV 4.x, Storage 12.x, AppConfig and
-all packages...
+install the Azure client libraries, refer to the main Github repository:
+![Impressions]( Release History 1.1.25 (2020-03-09)-
+get_client_from_cli_profile no longer requires "azure-core" if not necessary
+1.1.24 (2019-12-18)-...
 
 %package -n     python3-%{pypi_name}
 Summary:        %{summary}
@@ -29,12 +29,12 @@ Provides:       python3dist(%{pypi_name}) = %{version}
  
 Requires:       python3dist(azure-nspkg)
 %description -n python3-%{pypi_name}
-Microsoft Azure SDK for Python This is the Microsoft Azure common code.This
+ Microsoft Azure SDK for PythonThis is the Microsoft Azure common code.This
 package provides shared code by the Azure packages.If you are looking to
-install the Azure client libraries, refer to the main Github repository: ..
-image:: .. :changelog:Release History 1.1.24 (2019-12-18) +++++++++++++++++++-
-get_client_from_cli_profile now supports KV 4.x, Storage 12.x, AppConfig and
-all packages...
+install the Azure client libraries, refer to the main Github repository:
+![Impressions]( Release History 1.1.25 (2020-03-09)-
+get_client_from_cli_profile no longer requires "azure-core" if not necessary
+1.1.24 (2019-12-18)-...
 
 
 %prep
@@ -51,10 +51,13 @@ rm -rf %{pypi_name}.egg-info
 %py3_install
 
 %files -n python3-%{pypi_name}
-%doc README.rst
+%doc README.md
 %{python3_sitelib}/azure
 %{python3_sitelib}/azure_common-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 1.1.25-1
+- Upgrade to version 1.1.25.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 1.1.24-1
 - Initial package.

@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        12.0.0b7
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Microsoft Azure File DataLake Storage Client Library for Python
 
 License:        MIT License
@@ -73,5 +73,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_storage_file_datalake-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 12.0.0b7-2
+- Rebuilt.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 12.0.0b7-1
 - Initial package.

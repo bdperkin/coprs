@@ -2,7 +2,7 @@
 %global pypi_name azure-mgmt-storage
 
 Name:           python-%{pypi_name}
-Version:        7.2.0
+Version:        8.0.0
 Release:        1%{?dist}
 Summary:        Microsoft Azure Storage Management Client Library for Python
 
@@ -21,11 +21,11 @@ BuildRequires:  python3dist(setuptools)
 
 %description
  Microsoft Azure SDK for PythonThis is the Microsoft Azure Storage Management
-Client Library.Azure Resource Manager (ARM) is the next generation of
-management APIs that replace the old Azure Service Management (ASM).This
-package has been tested with Python 2.7, 3.5, 3.6, 3.7 and 3.8.For the older
-Azure Service Management (ASM) libraries, see [azure-servicemanagement-legacy](
-For a more...
+Client Library. This package has been tested with Python 2.7, 3.5, 3.6, 3.7 and
+3.8. For a more complete view of Azure libraries, see the [Github repo]( For
+code examples, see [Storage Management]( on docs.microsoft.com. Provide
+FeedbackIf you encounter any bugs or have suggestions, please file an issue in
+the...
 
 %package -n     python3-%{pypi_name}
 Summary:        %{summary}
@@ -39,11 +39,11 @@ Requires:       python3dist(msrestazure) < 2.0.0
 Requires:       python3dist(msrestazure) >= 0.4.32
 %description -n python3-%{pypi_name}
  Microsoft Azure SDK for PythonThis is the Microsoft Azure Storage Management
-Client Library.Azure Resource Manager (ARM) is the next generation of
-management APIs that replace the old Azure Service Management (ASM).This
-package has been tested with Python 2.7, 3.5, 3.6, 3.7 and 3.8.For the older
-Azure Service Management (ASM) libraries, see [azure-servicemanagement-legacy](
-For a more...
+Client Library. This package has been tested with Python 2.7, 3.5, 3.6, 3.7 and
+3.8. For a more complete view of Azure libraries, see the [Github repo]( For
+code examples, see [Storage Management]( on docs.microsoft.com. Provide
+FeedbackIf you encounter any bugs or have suggestions, please file an issue in
+the...
 
 
 %prep
@@ -68,5 +68,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_mgmt_storage-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 8.0.0-1
+- Upgrade to version 8.0.0.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 7.2.0-1
 - Initial package.

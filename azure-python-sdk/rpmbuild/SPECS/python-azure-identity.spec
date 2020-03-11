@@ -2,7 +2,7 @@
 %global pypi_name azure-identity
 
 Name:           python-%{pypi_name}
-Version:        1.3.0
+Version:        1.4.0b1
 Release:        1%{?dist}
 Summary:        Microsoft Azure Identity Library for Python
 
@@ -76,5 +76,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_identity-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 1.4.0b1-1
+- Upgrade to version 1.4.0b1.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 1.3.0-1
 - Initial package.

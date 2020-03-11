@@ -2,7 +2,7 @@
 %global pypi_name azure-keyvault-keys
 
 Name:           python-%{pypi_name}
-Version:        4.0.1
+Version:        4.2.0b1
 Release:        1%{?dist}
 Summary:        Microsoft Azure Key Vault Keys Client Library for Python
 
@@ -12,7 +12,6 @@ Source0:        https://files.pythonhosted.org/packages/source/a/%{pypi_name}/%{
 BuildArch:      noarch
  
 BuildRequires:  python3-devel
-BuildRequires:  python3dist(azure-common) >= 1.1
 BuildRequires:  python3dist(azure-core) < 2.0.0
 BuildRequires:  python3dist(azure-core) >= 1.2.1
 BuildRequires:  python3dist(azure-keyvault-nspkg)
@@ -34,7 +33,6 @@ Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 Provides:       python3dist(%{pypi_name}) = %{version}
  
-Requires:       python3dist(azure-common) >= 1.1
 Requires:       python3dist(azure-core) < 2.0.0
 Requires:       python3dist(azure-core) >= 1.2.1
 Requires:       python3dist(azure-keyvault-nspkg)
@@ -72,5 +70,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_keyvault_keys-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 4.2.0b1-1
+- Upgrade to version 4.2.0b1.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 4.0.1-1
 - Initial package.

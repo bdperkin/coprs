@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.3.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Microsoft Azure Event Grid Client Library for Python
 
 License:        MIT License
@@ -68,5 +68,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/azure_eventgrid-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 1.3.0-2
+- Rebuilt.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 1.3.0-1
 - Initial package.

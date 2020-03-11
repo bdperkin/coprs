@@ -2,7 +2,7 @@
 %global pypi_name azure-mgmt-cosmosdb
 
 Name:           python-%{pypi_name}
-Version:        0.11.0
+Version:        0.12.0
 Release:        1%{?dist}
 Summary:        Microsoft Azure Cosmos DB Management Client Library for Python
 
@@ -20,12 +20,12 @@ BuildRequires:  python3dist(msrestazure) >= 0.4.32
 BuildRequires:  python3dist(setuptools)
 
 %description
-Microsoft Azure SDK for Python This is the Microsoft Azure Cosmos DB Management
-Client Library.Azure Resource Manager (ARM) is the next generation of
-management APIs that replace the old Azure Service Management (ASM).This
-package has been tested with Python 2.7, 3.5, 3.6 and 3.7.For the older Azure
-Service Management (ASM) libraries, see azure-servicemanagement-legacy <
-library.For a more...
+ Microsoft Azure SDK for PythonThis is the Microsoft Azure Cosmos DB Management
+Client Library. This package has been tested with Python 2.7, 3.5, 3.6, 3.7 and
+3.8. For a more complete view of Azure libraries, see the [Github repo]( For
+code examples, see [Cosmos DB Management]( on docs.microsoft.com. Provide
+FeedbackIf you encounter any bugs or have suggestions, please file an issue in
+the...
 
 %package -n     python3-%{pypi_name}
 Summary:        %{summary}
@@ -38,12 +38,12 @@ Requires:       python3dist(msrest) >= 0.5.0
 Requires:       python3dist(msrestazure) < 2.0.0
 Requires:       python3dist(msrestazure) >= 0.4.32
 %description -n python3-%{pypi_name}
-Microsoft Azure SDK for Python This is the Microsoft Azure Cosmos DB Management
-Client Library.Azure Resource Manager (ARM) is the next generation of
-management APIs that replace the old Azure Service Management (ASM).This
-package has been tested with Python 2.7, 3.5, 3.6 and 3.7.For the older Azure
-Service Management (ASM) libraries, see azure-servicemanagement-legacy <
-library.For a more...
+ Microsoft Azure SDK for PythonThis is the Microsoft Azure Cosmos DB Management
+Client Library. This package has been tested with Python 2.7, 3.5, 3.6, 3.7 and
+3.8. For a more complete view of Azure libraries, see the [Github repo]( For
+code examples, see [Cosmos DB Management]( on docs.microsoft.com. Provide
+FeedbackIf you encounter any bugs or have suggestions, please file an issue in
+the...
 
 
 %prep
@@ -63,10 +63,13 @@ rm -rf %{pypi_name}.egg-info
 %{__python3} setup.py test || true
 
 %files -n python3-%{pypi_name}
-%doc README.rst
+%doc README.md
 %{python3_sitelib}/azure
 %{python3_sitelib}/azure_mgmt_cosmosdb-%{version}-py?.?.egg-info
 
 %changelog
+* Wed Mar 11 2020 Brandon Perkins <bperkins@redhat.com> - 0.12.0-1
+- Upgrade to version 0.12.0.
+
 * Sun Mar 01 2020 Brandon Perkins <bperkins@redhat.com> - 0.11.0-1
 - Initial package.
